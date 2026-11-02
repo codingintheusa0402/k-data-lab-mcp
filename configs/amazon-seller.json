@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "k-data-lab-amazon-seller": {
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper",
+      "headers": {
+        "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
+      }
+    }
+  }
+}

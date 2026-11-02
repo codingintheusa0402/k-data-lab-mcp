@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "k-data-lab-travel": {
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper",
+      "headers": {
+        "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
+      }
+    }
+  }
+}

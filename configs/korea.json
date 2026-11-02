@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "k-data-lab-korea": {
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper",
+      "headers": {
+        "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
+      }
+    }
+  }
+}

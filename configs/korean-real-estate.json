@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "k-data-lab-korean-real-estate": {
-      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/kbland-scraper",
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/kbland-scraper,k-data-lab/r114-scraper",
       "headers": {
         "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
       }

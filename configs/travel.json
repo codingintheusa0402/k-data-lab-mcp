@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "k-data-lab-travel": {
-      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper",
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper,k-data-lab/airline-award-seat-scraper",
       "headers": {
         "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
       }

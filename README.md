@@ -1,8 +1,8 @@
 # K-Data Lab MCP: Korean data and e-commerce tools for AI agents
 
 Give Claude, ChatGPT, Cursor, VS Code or any MCP client direct tools for data that is hard to get elsewhere:
-**Korean music charts (Melon, Genie, Bugs, FLO, VIBE), Korean apartment prices (KB부동산)**, Amazon ratings,
-Google Play reviews, Google Ads Transparency and Agoda hotel prices.
+**Korean music charts (Melon, Genie, Bugs, FLO, VIBE), Korean apartment prices (KB부동산, 부동산114)**, Amazon ratings,
+Google Play reviews, Google Ads Transparency, Agoda hotel prices, live Alaska Airlines award seats and public Telegram channels.
 
 Every tool is a [K-Data Lab](https://apify.com/k-data-lab) actor on the Apify Store, served through
 [Apify's hosted MCP server](https://mcp.apify.com). Nothing to install or host: add one URL to your client and the
@@ -19,7 +19,7 @@ tools appear by name, so the agent doesn't have to search for them.
 
 **Claude Code**
 ```bash
-claude mcp add --transport http k-data-lab "https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper" \
+claude mcp add --transport http k-data-lab "https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper" \
   --header "Authorization: Bearer <YOUR_APIFY_TOKEN>"
 ```
 
@@ -28,7 +28,7 @@ claude mcp add --transport http k-data-lab "https://mcp.apify.com?tools=actors,d
 {
   "mcpServers": {
     "k-data-lab-korea": {
-      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper",
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper",
       "headers": {
         "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
       }
@@ -47,6 +47,8 @@ Clients that support OAuth can drop the header: they will open an Apify sign-in 
    - "Get the 1★ and 2★ Google Play reviews of com.spotify.music from the last 7 days."
    - "Which ads is hubspot.com running on YouTube?"
    - "Cheapest 4★+ Agoda hotels in Shinjuku for 2 adults, Dec 20–23."
+   - "Find business class award seats from LAX to Tokyo in December on Alaska miles."
+   - "What did public Telegram channels say about this topic this week?"
 
 ## Tools
 
@@ -63,7 +65,10 @@ Clients that support OAuth can drop the header: they will open an Apify sign-in 
 | Amazon Seller Central reviews | [`k-data-lab/amazon-seller-central-review-scraper`](https://apify.com/k-data-lab/amazon-seller-central-review-scraper) | Your own brand's customer reviews from Seller Central, for monitoring | $3 / 1,000 reviews |
 | Google Play | [`k-data-lab/google-play-scraper`](https://apify.com/k-data-lab/google-play-scraper) | App details, exact installs, reviews with stars, version and developer reply | $0.06 / 1,000 reviews |
 | Google Ads Transparency | [`k-data-lab/google-ad-library-scraper`](https://apify.com/k-data-lab/google-ad-library-scraper) | Every ad a domain or brand runs on Search, YouTube, Shopping, Maps and Play; monitor mode returns only new ads | $0.90 / 1,000 ads |
+| 부동산114 (R114) | [`k-data-lab/r114-scraper`](https://apify.com/k-data-lab/r114-scraper) | Korean apartment R114 sale and jeonse prices per unit type, up to 10 years of weekly prices, actual deals, district price lists | $4.00 / 1,000 complexes |
 | Agoda | [`k-data-lab/agoda-scraper`](https://apify.com/k-data-lab/agoda-scraper) | Hotel prices per night and total with taxes, every room and rate plan, cancellation terms, reviews | $1.50 / 1,000 hotels |
+| Airline award seats | [`k-data-lab/airline-award-seat-scraper`](https://apify.com/k-data-lab/airline-award-seat-scraper) | Live Alaska Airlines award search, with partner awards: points, taxes, seats left, cabin and flights for any route and date | $1.00 / 1,000 award options |
+| Telegram | [`k-data-lab/telegram-channel-scraper`](https://apify.com/k-data-lab/telegram-channel-scraper) | Keyword search across public channels and channel message history, with views and reactions, no account needed | $1.40 / 1,000 keyword matches, $0.30 / 1,000 messages |
 
 Prices are the per-event prices on the Apify Free plan at the time of writing; other Apify plans have their own tier prices.
 Each actor's Store page shows the current price for your plan. A small start fee applies per run.
@@ -74,20 +79,21 @@ Load only what you need. Fewer tools keep the agent's context small.
 
 | Bundle | Config file | MCP URL |
 |---|---|---|
-| `korea` | [configs/korea.json](configs/korea.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper` |
+| `korea` | [configs/korea.json](configs/korea.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper,k-data-lab/r114-scraper` |
 | `kpop-charts` | [configs/kpop-charts.json](configs/kpop-charts.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper` |
-| `korean-real-estate` | [configs/korean-real-estate.json](configs/korean-real-estate.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/kbland-scraper` |
+| `korean-real-estate` | [configs/korean-real-estate.json](configs/korean-real-estate.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/kbland-scraper,k-data-lab/r114-scraper` |
 | `amazon-seller` | [configs/amazon-seller.json](configs/amazon-seller.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper` |
 | `app-and-ads` | [configs/app-and-ads.json](configs/app-and-ads.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper` |
-| `travel` | [configs/travel.json](configs/travel.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper` |
-| `all` | [configs/all.json](configs/all.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper,k-data-lab/agoda-scraper` |
+| `travel` | [configs/travel.json](configs/travel.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper,k-data-lab/airline-award-seat-scraper` |
+| `telegram` | [configs/telegram.json](configs/telegram.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/telegram-channel-scraper` |
+| `all` | [configs/all.json](configs/all.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper,k-data-lab/agoda-scraper,k-data-lab/r114-scraper,k-data-lab/airline-award-seat-scraper,k-data-lab/telegram-channel-scraper` |
 
 `actors,docs` keeps Apify's own search and docs tools available next to ours. Remove them for a minimal tool list.
 
 ## FAQ
 
 **Is this official?** No. These are independent tools. They are not affiliated with Melon, Genie, Bugs, FLO, NAVER, KB국민은행,
-Amazon, Google or Agoda.
+Amazon, Google, Agoda, 부동산114, Alaska Airlines or Telegram.
 
 **Who pays?** You, on your own Apify account, only for the results returned. There is no subscription.
 

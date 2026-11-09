@@ -79,14 +79,14 @@ Load only what you need. Fewer tools keep the agent's context small.
 
 | Bundle | Config file | MCP URL |
 |---|---|---|
-| `korea` | [configs/korea.json](configs/korea.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper,k-data-lab/r114-scraper` |
+| `korea` | [configs/korea.json](configs/korea.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper` |
 | `kpop-charts` | [configs/kpop-charts.json](configs/kpop-charts.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper` |
 | `korean-real-estate` | [configs/korean-real-estate.json](configs/korean-real-estate.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/kbland-scraper,k-data-lab/r114-scraper` |
 | `amazon-seller` | [configs/amazon-seller.json](configs/amazon-seller.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper` |
 | `app-and-ads` | [configs/app-and-ads.json](configs/app-and-ads.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper` |
 | `travel` | [configs/travel.json](configs/travel.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/agoda-scraper,k-data-lab/airline-award-seat-scraper` |
 | `telegram` | [configs/telegram.json](configs/telegram.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/telegram-channel-scraper` |
-| `all` | [configs/all.json](configs/all.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/r114-scraper,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper,k-data-lab/agoda-scraper,k-data-lab/r114-scraper,k-data-lab/airline-award-seat-scraper,k-data-lab/telegram-channel-scraper` |
+| `all` | [configs/all.json](configs/all.json) | `https://mcp.apify.com?tools=actors,docs,k-data-lab/korean-music-chart-scraper,k-data-lab/melon-scraper,k-data-lab/genie-scraper,k-data-lab/bugs-scraper,k-data-lab/flo-scraper,k-data-lab/vibe-scraper,k-data-lab/kbland-scraper,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper,k-data-lab/agoda-scraper,k-data-lab/r114-scraper,k-data-lab/airline-award-seat-scraper,k-data-lab/telegram-channel-scraper` |
 
 `actors,docs` keeps Apify's own search and docs tools available next to ours. Remove them for a minimal tool list.
 

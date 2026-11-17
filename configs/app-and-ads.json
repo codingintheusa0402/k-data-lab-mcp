@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "k-data-lab-app-and-ads": {
-      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/google-play-scraper,k-data-lab/google-ad-library-scraper",
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/google-play-scraper,k-data-lab/app-store-scraper,k-data-lab/google-ad-library-scraper,k-data-lab/google-trends-scraper",
       "headers": {
         "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
       }

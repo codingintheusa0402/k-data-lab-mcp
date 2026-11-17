@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "k-data-lab-amazon-seller": {
-      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper",
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/amazon-asin-rating-scraper,k-data-lab/amazon-seller-central-review-scraper,k-data-lab/amazon-reviews-scraper,k-data-lab/amazon-search-scraper,k-data-lab/amazon-bestsellers-scraper",
       "headers": {
         "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
       }

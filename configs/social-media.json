@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "k-data-lab-social-media": {
+      "url": "https://mcp.apify.com?tools=actors,docs,k-data-lab/tiktok-scraper,k-data-lab/youtube-scraper,k-data-lab/youtube-comments-scraper,k-data-lab/x-tweet-scraper,k-data-lab/pinterest-scraper,k-data-lab/telegram-channel-scraper",
+      "headers": {
+        "Authorization": "Bearer <YOUR_APIFY_TOKEN>"
+      }
+    }
+  }
+}
